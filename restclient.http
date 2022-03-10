@@ -1,0 +1,36 @@
+POST http://localhost:3333/news/create HTTP/1.1
+content-type: application/json
+
+{
+    "title": "Noticia",
+    "image": "url.com.br",
+    "relatedItems": "relatedItems",
+    "noticeLink": "newslink.com.br",
+    "subtitle": "Nenhum"
+}
+
+###
+GET http://localhost:3333/news/search?title=mostra
+authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsIm5hbWVPZlVzZXIiOiJzYW1wbGUiLCJpYXQiOjE2NDY4NzIzNTYsImV4cCI6MTY0Njg3MjQxNn0.Amr9LGuv2Y4Kr5MVKeIYkYg3QwkA9ico4aIFQKYd5LE
+
+### USERS ROUTES
+
+POST http://localhost:3333/users/signup HTTP/1.1
+content-type: application/json
+
+{
+    "name": "sample",
+    "birthday": "1991-09-24 03:00:00",
+    "email": "sampalaaeaaaaaaa@email.com",
+    "personalDocument": "01425312591",
+    "password": "123456"
+}
+
+###
+POST http://localhost:3333/users/signin HTTP/1.1
+content-type: application/json
+
+{
+    "email": "sampalaaeaaaaaaa@email.com",
+    "password": "123456"
+}
